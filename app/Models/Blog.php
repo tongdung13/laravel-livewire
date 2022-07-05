@@ -24,4 +24,13 @@ class Blog extends Model
             ]
             ];
     }
+
+    public function getImageAttribute($image)
+    {
+        if ($image != null) {
+            return asset($image);
+        }
+
+        return false;
+    }
 }
